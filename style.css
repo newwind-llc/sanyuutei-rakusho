@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Serif JP', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'ヒラギノ明朝 ProN W3', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: block;
+}
+
+.desktop-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-nav li {
+    margin: 0;
+}
+
+.desktop-nav a {
+    display: block;
+    padding: 15px 25px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    border-right: 1px solid #eee;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.desktop-nav a:hover {
+    background: #f8f9fa;
+    color: #D2691E;
+}
+
+.desktop-nav li:last-child a {
+    border-right: none;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.site-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-menu span {
+    width: 22px;
+    height: 2px;
+    background: #333;
+    transition: 0.3s;
+}
+
+.mobile-menu-dropdown {
+    background: white;
+    border-top: 1px solid #eee;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu-dropdown.active {
+    max-height: 400px;
+}
+
+.mobile-menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-dropdown a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.mobile-menu-dropdown a:hover {
+    background: #f8f9fa;
+}
+
+/* Key Visual */
+.key-visual {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-visual-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Title Section */
+.title-section {
+    background: white;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.title-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.profile-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0 0 30px 0;
+    line-height: 1.6;
+    font-weight: 500;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.contact-info-main {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #D2691E;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-info-main p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact-info-main a {
+    color: #D2691E;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info-main a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 0;
+}
+
+.content-section {
+    background: white;
+    margin-bottom: 30px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #D2691E;
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列表示に変更 */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.event-item {
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 画像が親要素の角丸に沿うようにします */
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.event-item img {
+    width: 100%;
+}
+
+.event-item h3 {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Noto Serif JP', serif;
+    margin-top: auto; /* テキストコンテンツをアイテムの下部に配置します */
+    padding: 15px 20px 5px;
+}
+
+.event-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: left; /* 説明文は左揃えにします */
+}
+
+/* Profile Content */
+.profile-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-intro {
+    display: flex;
+    align-items: flex-start; /* 上端で揃えます */
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-direction: row-reverse;
+}
+
+.profile-image {
+    width: 280px;
+    flex-shrink: 0; /* コンテナが縮まないように設定 */
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto; /* 画像の縦横比を維持します */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.profile-info-left {
+    text-align: left;
+}
+
+.profile-info-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.profile-info-left strong {
+    font-weight: 600;
+    color: #222;
+}
+
+.career-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.career-section h4 {
+    font-size: 1.1rem;
+    color: #D2691E;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.career-history h4,
+.ambassador-roles h4,
+.qualifications h4 {
+    font-size: 1.1rem;
+    color: #D2691E;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.intro-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.ambassador-roles ul,
+.qualifications ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ambassador-roles li,
+.qualifications li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.ambassador-roles li::before,
+.qualifications li::before {
+    content: '•';
+    color: #D2691E;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.career-history dl {
+    padding-left: 0;
+}
+
+.career-history dt,
+.qualifications dt {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    padding-top: 8px;
+    text-decoration: underline;
+}
+
+.career-history dd {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    padding-bottom: 8px;
+    margin-left: 1.5em; /* 説明文を字下げ */
+}
+
+/* Job Proposals */
+.job-proposals-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.job-proposal-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.job-proposal-top {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.job-proposal-image {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.job-proposal-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.job-proposal-summary {
+    flex-grow: 1;
+}
+
+.job-proposal-summary h3 {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Noto Serif JP', serif;
+    margin-bottom: 10px;
+}
+
+.job-proposal-summary p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.job-proposal-summary a {
+    color: #D2691E;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.job-proposal-summary a:hover {
+    text-decoration: underline;
+}
+
+.job-proposal-details {
+    background: #fff;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.job-proposal-details h4 {
+    font-size: 1.2rem;
+    color: #D2691E;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 1.5em;
+}
+
+.job-proposal-details h4:first-of-type {
+    margin-top: 0;
+}
+
+.job-proposal-details p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Speaking Class */
+.speaking-class-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.speaking-class-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.speaking-class-top {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.speaking-class-image {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.speaking-class-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.speaking-class-summary {
+    flex-grow: 1;
+}
+
+.speaking-class-summary p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.speaking-class-details {
+    background: #fff;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.speaking-class-details h4 {
+    font-size: 1.2rem;
+    color: #D2691E;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 1.5em;
+}
+
+.speaking-class-details h4:first-of-type {
+    margin-top: 0;
+}
+
+.speaking-class-details p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Videos Grid */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.video-item {
+    text-align: center;
+}
+
+.video-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* SNS Links */
+.sns-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.sns-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 120px;
+}
+
+.sns-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.sns-item img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 12px;
+}
+
+.sns-item span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.sns-item.facebook:hover {
+    color: #1877f2;
+}
+
+.sns-item.twitter:hover {
+    color: #1da1f2;
+}
+
+.sns-item.instagram:hover {
+    color: #e4405f;
+}
+
+.inquiry-note {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+.footer-section p {
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .key-visual {
+        height: 250px;
+        margin-top: 70px;
+    }
+
+    .title-section h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+
+    .profile-intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .profile-image img {
+        height: auto;
+    }
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .event-item p {
+        font-size: 1.1rem;
+    }
+
+    .job-proposal-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .job-proposal-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .speaking-class-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .speaking-class-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sns-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .video-item iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-section h1 {
+        font-size: 1.7rem;
+    }
+
+    .site-title {
+        font-size: 1rem;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .video-item iframe {
+        height: 180px;
+    }
+}
